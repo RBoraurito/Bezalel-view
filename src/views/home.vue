@@ -3,7 +3,7 @@
     <div class="hero">
       <img src="..\assets\resources\photos\header.jpg" alt="" srcset="" />
       <div
-        class="column is-8-desktop is-10-mobile is-11-tablet "
+        class="column is-8-widescreen is-10-desktop is-full-touch "
         style="justify-content: start; margin: auto 0"
       >
         <h1
@@ -16,20 +16,31 @@
         >
           talent on loan from god, Exodus36:1
         </h4>
+        <div class="control">
+          <button class="button is-warning is-medium">
+            <strong>Make an apointment</strong>
+          </button>
+        </div>
       </div>
     </div>
     <culture />
     <about-us />
+    <skills />
+    <contact />
   </div>
 </template>
 <script>
 import culture from "@/components/culture";
 import aboutUs from "@/components/about-us";
+import skills from "@/components/skills";
+import contact from "@/components/contact";
 export default {
   name: "home",
   components: {
     culture,
-    aboutUs
+    aboutUs,
+    skills,
+    contact
   }
 };
 </script>
@@ -39,7 +50,7 @@ img {
   height: 100%;
   position: absolute;
   object-fit: cover;
-  top: 0;
+  bottom: 0;
   right: 0;
   z-index: 1;
 }
@@ -47,7 +58,7 @@ img {
   z-index: 3;
 }
 .hero {
-  height: 85vh;
+  height: 100vh;
   position: relative;
 }
 .heroTitle {

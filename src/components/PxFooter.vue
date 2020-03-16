@@ -4,13 +4,13 @@
       <div class="columns">
         <div class="column is-8-widescreen is-7-desktop">
           <h3
-            class="has-text-warning has-text-centered-touch is-size-4"
+            class="has-text-warning has-text-centered-touch is-size-4 is-size-5-touch"
             @click="aboutDrop"
           >
             About the company
           </h3>
           <div class="section" :class="about ? 'is-hidden-mobile' : ''">
-            <p class="is-size-5 has-text-grey-lighter">
+            <p class="is-size-5 is-size-6-touch has-text-grey-lighter">
               We are specialized in residential and commercial cleaning, we care
               about the details of our work to improve our service quality.
               <br />
@@ -20,7 +20,7 @@
         </div>
         <div class="column">
           <h3
-            class="has-text-warning has-text-centered-touch is-size-4"
+            class="has-text-warning has-text-centered-touch is-size-4 is-size-5-touch"
             @click="linkDrop"
           >
             Quick links
@@ -29,18 +29,26 @@
             class="section has-text-centered-mobile"
             :class="link ? 'is-hidden-mobile' : ''"
           >
-            <li class="is-size-5 has-text-grey-lighter ">Home</li>
-            <li class="is-size-5 has-text-grey-lighter">Testimonials</li>
-            <li class="is-size-5 has-text-grey-lighter">Privacy</li>
-            <li class="is-size-5 has-text-grey-lighter">Terms & Conditions</li>
+            <li class="is-size-5 is-size-6-touch has-text-grey-lighter ">
+              Home
+            </li>
+            <li class="is-size-5 is-size-6-touch has-text-grey-lighter">
+              Testimonials
+            </li>
+            <li class="is-size-5 is-size-6-touch has-text-grey-lighter">
+              Privacy
+            </li>
+            <li class="is-size-5 is-size-6-touch has-text-grey-lighter">
+              Terms & Conditions
+            </li>
           </ul>
         </div>
       </div>
-      <div class="container ">
-        <div class="columns has-text-centered is-vcentered is-mobile">
-          <div class="column is-4 social-link"><facebook /></div>
-          <div class="column is-4 social-link"><gmail /></div>
-          <div class="column is-4 social-link"><whatsapp /></div>
+      <div class="container section">
+        <div class="columns has-text-centered is-vcentered">
+          <div class="column is-4 social-link"><facebook /><strong class="has-text-white">BEZALELGROUP</strong></div>
+          <div class="column is-4 social-link"><gmail /><strong class="has-text-white">BEZALELGROUP7@GMAIL.COM</strong></div>
+          <div class="column is-4 social-link"><whatsapp /> <strong class="has-text-white">+1 786-352-1620</strong></div>
         </div>
       </div>
     </div>
@@ -83,8 +91,8 @@ input {
   margin: 10px;
 }
 .social-link {
-  width: 55px;
-  height: 55px;
+  width: 75px;
+  height: 75px;
   padding: 0;
 }
 li {

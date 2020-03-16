@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="navbar has-background-grey-darker"
+    class="navbar is-fixed-top has-background-grey-darker"
     role="navigation"
     aria-label="main navigation"
   >
@@ -47,17 +47,10 @@
             v-show="menuDrop"
           >
             <a class="navbar-item has-text-warning">
-              About
+              Residential cleaning
             </a>
             <a class="navbar-item has-text-warning">
-              Jobs
-            </a>
-            <a class="navbar-item has-text-warning">
-              Contact
-            </a>
-            <hr class="navbar-divider" />
-            <a class="navbar-item has-text-warning">
-              Report an issue
+              Comercial cleaning
             </a>
           </div>
         </div>
