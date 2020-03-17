@@ -46,43 +46,57 @@
             class="navbar-dropdown has-background-grey-darker"
             v-show="menuDrop"
           >
-            <a class="navbar-item has-text-warning">
+            <router-link
+              :to="{ name: 'residential' }"
+              class="navbar-item has-text-warning"
+            >
               Residential cleaning
-            </a>
+            </router-link>
             <a class="navbar-item has-text-warning">
               Comercial cleaning
             </a>
           </div>
         </div>
         <a class="navbar-item has-text-warning is-size-5">
-          Testimonials
+          About us
         </a>
       </div>
 
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons columns is-centered is-8">
-            <a class="button is-warning is-outlined is-medium">
+            <a
+              class="button is-warning is-outlined is-medium"
+              @click="toggleModal"
+            >
               <strong>Make an apointment</strong>
             </a>
-            <a class="button is-warning is-outlined is-medium">
+            <a
+              class="button is-warning is-outlined is-medium"
+              href="tel:+17863521620"
+            >
               <strong>Call us</strong>
             </a>
           </div>
         </div>
       </div>
     </div>
+    <apointment :class="modal ? 'is-active' : ''" @close="toggleModal" />
   </nav>
 </template>
 
 <script>
+import apointment from "./apointment.vue";
 export default {
   name: "PxHeader",
-  components: {},
+  components: {
+    apointment
+  },
   data() {
     return {
       menuStatus: false,
-      menuDrop: false
+      menuDrop: false,
+      modal: false
     };
   },
   methods: {
@@ -91,6 +105,9 @@ export default {
     },
     toggleMenu() {
       this.menuDrop = !this.menuDrop;
+    },
+    toggleModal() {
+      this.modal = !this.modal;
     }
   }
 };

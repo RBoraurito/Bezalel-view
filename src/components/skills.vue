@@ -1,9 +1,11 @@
 <template>
   <div class="section">
-    <h4 class="has-text-centered has-text-dark is-size-2 is-size-3-touch">
+    <h4
+      class="has-text-centered has-text-dark is-size-2 is-size-3-tablet is-size-4-mobile"
+    >
       What is the Bezalel's speciality?
     </h4>
-    <h4 class="has-text-centered has-text-grey is-size-4">
+    <h4 class="has-text-centered has-text-grey is-size-4 is-size-5-touch">
       -our skills-
     </h4>
     <div class="columns is-variable is-3 is-desktop">

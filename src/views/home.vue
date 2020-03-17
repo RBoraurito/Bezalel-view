@@ -17,7 +17,7 @@
           talent on loan from god, Exodus36:1
         </h4>
         <div class="control">
-          <button class="button is-warning is-medium">
+          <button class="button is-warning is-medium" @click="toggleModal">
             <strong>Make an apointment</strong>
           </button>
         </div>
@@ -27,6 +27,11 @@
     <about-us />
     <skills />
     <contact />
+    <apointment
+      @click="toggleModal"
+      @close="toggleModal"
+      :class="modal ? 'is-active' : ''"
+    />
   </div>
 </template>
 <script>
@@ -34,13 +39,25 @@ import culture from "@/components/culture";
 import aboutUs from "@/components/about-us";
 import skills from "@/components/skills";
 import contact from "@/components/contact";
+import apointment from "@/components/apointment";
 export default {
   name: "home",
+  data() {
+    return {
+      modal: false
+    };
+  },
   components: {
     culture,
     aboutUs,
     skills,
-    contact
+    contact,
+    apointment
+  },
+  methods: {
+    toggleModal() {
+      this.modal = !this.modal;
+    }
   }
 };
 </script>

@@ -44,11 +44,32 @@
           </ul>
         </div>
       </div>
-      <div class="container section">
-        <div class="columns has-text-centered is-vcentered">
-          <div class="column is-4 social-link"><facebook /><strong class="has-text-white">BEZALELGROUP</strong></div>
-          <div class="column is-4 social-link"><gmail /><strong class="has-text-white">BEZALELGROUP7@GMAIL.COM</strong></div>
-          <div class="column is-4 social-link"><whatsapp /> <strong class="has-text-white">+1 786-352-1620</strong></div>
+      <div class="container">
+        <div class="columns has-text-centered is-vcentered is-mobile">
+          <div class="column is 6">
+            <p class="has-text-warning is-size-4">Folow Us:</p>
+          </div>
+          <a
+            class="column is-2 social-link"
+            href="https://www.facebook.com/BEZALELSERVICES/"
+            target="blank"
+          >
+            <facebook />
+          </a>
+          <a
+            class="column is-2 social-link"
+            href="mailto:bezalelgroup7@gmail.com"
+            target="blank"
+          >
+            <gmail />
+          </a>
+          <a
+            class="column is-2 social-link"
+            href="https://wa.link/2efk6c"
+            target="blank"
+          >
+            <whatsapp />
+          </a>
         </div>
       </div>
     </div>

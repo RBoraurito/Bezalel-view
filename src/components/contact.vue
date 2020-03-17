@@ -7,7 +7,7 @@
         >
           Contact us
         </h4>
-        <h4 class="has-text-centered has-text-grey is-size-4">
+        <h4 class="has-text-centered has-text-grey is-size-4 is-size-5-mobile">
           -we are waiting for you-
         </h4>
       </div>
