@@ -162,5 +162,6 @@ export default {
 <style scoped>
 .notification {
   margin-top: 15vh;
+  margin-bottom: 0;
 }
 </style>

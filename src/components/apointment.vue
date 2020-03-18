@@ -92,7 +92,6 @@
             <button class="button is-warning" :disabled="invalid">
               Contact
             </button>
-            <button class="button" @click="close">Cancel</button>
           </footer>
         </form>
       </ValidationObserver>
@@ -103,7 +102,7 @@
 <script>
 import { extend } from "vee-validate";
 import { required, email, alpha_spaces } from "vee-validate/dist/rules";
-
+import axios from "axios";
 // No message specified.
 extend("email", email);
 extend("alpha_spaces", alpha_spaces);
@@ -128,7 +127,26 @@ export default {
       this.$emit("close");
     },
     onSubmit() {
-      alert("Form has been submitted!");
+      axios({
+        method: "POST",
+        url: "http://localhost:3000/api/client",
+        data: {
+          name: this.name,
+          email: this.email,
+          cel: this.cel
+        }
+      });
+      if (this.extraInfo) {
+        axios({
+          method: "POST",
+          url: "http://localhost:3000/api/apointment",
+          data: {
+            client: this.email,
+            extra_i: this.extraInfo
+          }
+        });
+      }
+      this.close();
     }
   }
 };

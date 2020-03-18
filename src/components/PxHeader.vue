@@ -57,9 +57,12 @@
             </a>
           </div>
         </div>
-        <a class="navbar-item has-text-warning is-size-5">
+        <router-link
+          :to="{ name: 'about-us' }"
+          class="navbar-item has-text-warning is-size-5"
+        >
           About us
-        </a>
+        </router-link>
       </div>
 
       <div class="navbar-end">
